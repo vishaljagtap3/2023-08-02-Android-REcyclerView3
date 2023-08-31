@@ -7,4 +7,4 @@ class Task(
     val imageId : Int,
     val status : Boolean,
     var selected : Boolean = false
-)
+) : java.io.Serializable

@@ -42,12 +42,12 @@ class MainActivity : AppCompatActivity() {
                 task.selected = !task.selected
                 tasksAdapter.notifyItemChanged(position)
             } else {
-                startActivity(
-                    Intent(
-                        this@MainActivity,
-                        TaskDetailsActivity::class.java
-                    )
+                val intent = Intent(
+                    this@MainActivity,
+                    TaskDetailsActivity::class.java
                 )
+                intent.putExtra("task", task)
+                startActivity(intent)
             }
         }
 
